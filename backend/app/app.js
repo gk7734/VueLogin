@@ -10,7 +10,8 @@ const home = require("./src/routes/home")
 // app setting
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
+app.use('/js',express.static(`${__dirname}/src/public/js`));
 
-app.use("/", home)
+app.use("/", home);
 
 module.exports = app;
